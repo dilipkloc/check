@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Isits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @isits.each do |isit| %>
+      <tr>
+        <td><%= isit.name %></td>
+        <td><%= link_to 'Show', isit %></td>
+        <td><%= link_to 'Edit', edit_isit_path(isit) %></td>
+        <td><%= link_to 'Destroy', isit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Isit', new_isit_path %>

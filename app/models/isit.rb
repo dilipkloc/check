@@ -1,0 +1,2 @@
+class Isit < ApplicationRecord
+end
